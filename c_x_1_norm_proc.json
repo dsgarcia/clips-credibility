@@ -1,0 +1,241 @@
+{
+  "clip": {
+    "identification": {
+      "clip_id": "1870079286222184757",
+      "platform": "X",
+      "clip_url": "https://x.com/markinho_gc/status/1870079286222184757"
+    },
+    "content": {
+      "message": "Usar estatinas reduce eventos adversos en pacientes con FA de reciente diagnóstico. La dislipidemia es un factor de riesgo cardiovascular modificable que a menudo se subestima en pacientes con FA.\n\nResultados:\n📍 El uso regular de estatinas se asoció con una reducción significativa del riesgo de accidente cerebrovascular o AIT.\n📍 Los usuarios de estatinas mostraron sistemáticamente menores riesgos de mortalidad por todas las causas y MACE en comparación con los que no usaban estatinas, incluso después de ajustar variables de relevancia.\n📍 Un análisis dependiente del tiempo para tener en cuenta el momento del uso de estatinas, demostró una reducción significativa del riesgo.\n\nPosibles mecanismos.\n✅ Las vías implicadas en la FA incluyen inflamación, estrés oxidativo y otros mecanismos que aumentan la susceptibilidad o la progresión de la FA.\n✅ Las estatinas producen efectos pleiotrópicos, como propiedades antiinflamatorias, antioxidantes y antitrombóticas. Estos efectos pleiotrópicos pueden desempeñar un papel importante en la reducción del riesgo cardiovascular en esta población particular con FA.\n\nhttps://ahajournals.org/doi/10.1161/JA...\n@drpablocorral @MaximaMendez15 @MeralKayikcioglu @chemachir @profesoreruben @drfherediaz @RZubiranS @dremarquez @pabeda1 @KarleziAlonso @gomezdelgadoFJ @Drlipid @maciejbanach @MutazAlsabah @gonzaeperez @ezeforte @EzequielZaidel @alavallecobo @lynchsantiago",
+      "message_type": "text"
+    },
+    "dates": {
+      "creation_date": "2024-12-20T09:10:00",
+      "update_time": null
+    },
+    "geolocation": {
+      "has_geo_data": false,
+      "coordinates": {
+        "longitude": null,
+        "latitude": null
+      }
+    },
+    "interaction": {
+      "hashtags": [],
+      "links": [
+        "https://www.ahajournals.org/doi/10.1161/JAHA.124.035827"
+      ],
+      "mentions": [
+        "@drpablocorral",
+        "@MaximaMendez15",
+        "@MeralKayikcioglu",
+        "@chemachir",
+        "@profesoreruben",
+        "@drfherediaz",
+        "@RZubiranS",
+        "@dremarquez",
+        "@pabeda1",
+        "@KarleziAlonso",
+        "@gomezdelgadoFJ",
+        "@Drlipid",
+        "@maciejbanach",
+        "@MutazAlsabah",
+        "@gonzaeperez",
+        "@ezeforte",
+        "@EzequielZaidel",
+        "@alavallecobo",
+        "@lynchsantiago"
+      ],
+      "reactions_breakdown": {
+        "like": 59,
+        "love": null,
+        "angry": null,
+        "other": null
+      }
+    },
+    "multimedia": {
+      "media_id": null,
+      "duration": null,
+      "audio_track": null
+    },
+    "comments": [],
+    "performance_metrics": {
+      "view_count": 1710,
+      "impression_count": null
+    },
+    "metadata": {
+      "extraction_metadata": {
+        "extracted_at": "2024-12-21T15:30:00",
+        "processing_time_ms": 120,
+        "source_details": "Extracted from X.com"
+      }
+    },
+    "features": {
+      "generated_features": []
+    }
+  },
+  "user": {
+    "identification": {
+      "user_id": "@markinho_gc",
+      "name": "Marcos Gamboa"
+    },
+    "personal_information": {
+      "full_name": null,
+      "is_private": false,
+      "location": "Tulcan, Ecuador",
+      "audience_size": 1231
+    },
+    "contact": {
+      "business_contact_method": null,
+      "public_email": null,
+      "websites": []
+    },
+    "biography": "Padre y Esposo. Especialista en Medicina Interna. Interés en EAIS, RCV, DM2, IC, Osteoporosis, ETV. Docente IRM- USFQ. Manaba en Tulcán.",
+    "experience_and_education": {
+      "experience": [
+        "Docente IRM-USFQ"
+      ],
+      "education": []
+    }
+  },
+  "quality_metrics": [
+    {
+      "clip_id": "1870079286222184757",
+      "metric_name": "access_to_source_data",
+      "metric_value": 0.6,
+      "metric_factor": "verifiability_quality",
+      "calculation_timestamp": "2024-12-27T12:34:20.099216",
+      "calculation_method": "Direct mapping from MedicalVerifiabilityModule",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "verifiability_quality": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1870079286222184757",
+      "metric_name": "certification",
+      "metric_value": 1.0,
+      "metric_factor": "alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "calculation_timestamp": "2024-12-27T12:34:20.102651",
+      "processing_time_ms": 0,
+      "calculation_method": "Certification = alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "quality_metadata": {
+        "education_quality": 1.0,
+        "profession_quality": 1.0,
+        "alpha": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1870079286222184757",
+      "metric_name": "confidence",
+      "metric_value": 0.18543648140242852,
+      "metric_factor": "alpha * influence + (1 - alpha) * log(audience_size + 1) / log(max_audience_size + 1)",
+      "calculation_timestamp": "2024-12-27T12:34:20.106237",
+      "calculation_method": "Confidence = 0.7 * influence + 0.30000000000000004 * Normalized Audience Size",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "influence": 0.0,
+        "audience_size": 1231,
+        "normalized_audience_size": 0.6181216046747616,
+        "alpha": 0.7,
+        "max_audience_size": 100000
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1870079286222184757",
+      "metric_name": "trustworthiness",
+      "metric_value": 0.6370872962804858,
+      "metric_factor": "0.4 * access_to_source_data + 0.4 * certification + 0.2 * confidence",
+      "calculation_timestamp": "2024-12-27T12:34:20.110173",
+      "processing_time_ms": 0,
+      "calculation_method": "trustworthiness = 0.4 * Access to Source Data + 0.4 * Certification + 0.2 * Confidence",
+      "quality_metadata": {
+        "access_to_source_data": 0.5,
+        "certification": 1.0,
+        "confidence": 0.18543648140242852
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1870079286222184757",
+      "metric_name": "credibility",
+      "metric_value": 0.6370872962804858,
+      "metric_factor": "0 * trustworthiness_path_stability + 1 * trustworthiness",
+      "calculation_timestamp": "2024-12-27T14:05:32.780012",
+      "processing_time_ms": 0,
+      "calculation_method": "credibility = 0 * Trustworthiness_Path_Stability + 1 * Trustworthiness",
+      "quality_metadata": {
+        "trustworthiness_path_stability": 0,
+        "trustworthiness": 0.6370872962804858
+      },
+      "remarks": "trustworthiness_path_stability no encontrada; se asignó peso 0."
+    }
+  ],
+  "recommendations": {
+    "recommendations_count": 0,
+    "recommendation_details": []
+  },
+  "features": {
+    "generated_features": [
+      {
+        "module_name": "MedicalEducationModule",
+        "feature_name": "education",
+        "feature_value": "Especialista en Medicina Interna",
+        "confidence_level": 1.0,
+        "feature_details": {
+          "description": "Generated education based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:57.056598",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1393
+        }
+      },
+      {
+        "module_name": "MedicalVerifiabilityModule",
+        "feature_name": "medicalVerifiability",
+        "feature_value": "Medio (Docente IRM-USFQ)",
+        "confidence_level": 0.5,
+        "feature_details": {
+          "description": "Generated medicalVerifiability based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:58.486581",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1420
+        }
+      },
+      {
+        "module_name": "MedicalProfessionModule",
+        "feature_name": "profession",
+        "feature_value": "Médico Internista",
+        "confidence_level": 1.0,
+        "feature_details": {
+          "description": "Generated medical profession based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:59.801870",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1307
+        }
+      },
+      {
+        "module_name": "MedicalInfluenceModule",
+        "feature_name": "influence",
+        "feature_value": "No hay datos disponibles.",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated influence based on user recommendations."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:34:01.184212",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1373
+        }
+      }
+    ]
+  }
+}

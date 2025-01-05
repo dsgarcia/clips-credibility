@@ -1,0 +1,215 @@
+{
+  "clip": {
+    "identification": {
+      "clip_id": "1481773105817874",
+      "platform": "Facebook",
+      "clip_url": "https://www.facebook.com/watch/live/?ref=watch_permalink&v=1481773105817874&rdid=V5qA04VZ93LnRYJt"
+    },
+    "content": {
+      "message": "Infórmate en www.poreldespertar.com",
+      "message_type": "video"
+    },
+    "dates": {
+      "creation_date": null,
+      "update_time": "Reciente"
+    },
+    "geolocation": {
+      "has_geo_data": false,
+      "coordinates": {
+        "longitude": null,
+        "latitude": null
+      }
+    },
+    "interaction": {
+      "hashtags": [],
+      "links": [],
+      "mentions": [],
+      "reactions_breakdown": {
+        "like": 34,
+        "comments": 3,
+        "shares": null
+      }
+    },
+    "multimedia": {
+      "media_id": null,
+      "duration": "13:53",
+      "audio_track": null
+    },
+    "comments": [],
+    "performance_metrics": {
+      "view_count": null,
+      "impression_count": null
+    },
+    "metadata": {
+      "extraction_metadata": {
+        "extracted_at": null,
+        "processing_time_ms": null,
+        "source_details": "Facebook API"
+      }
+    },
+    "features": {
+      "generated_features": []
+    }
+  },
+  "user": {
+    "identification": {
+      "user_id": "332193940208312",
+      "name": "Pablo de la Iglesia"
+    },
+    "personal_information": {
+      "full_name": null,
+      "is_private": false,
+      "location": null,
+      "audience_size": 41100
+    },
+    "contact": {
+      "business_contact_method": null,
+      "public_email": null,
+      "websites": [
+        "https://www.poreldespertar.com/",
+        "https://www.expertosensalud.net/"
+      ]
+    },
+    "biography": "Soy Pablo de la Iglesia, naturópata y autor especializado en salud natural.",
+    "experience_and_education": {
+      "experience": [],
+      "education": []
+    }
+  },
+  "quality_metrics": [
+    {
+      "clip_id": "1481773105817874",
+      "metric_name": "access_to_source_data",
+      "metric_value": 0.1,
+      "metric_factor": "verifiability_quality",
+      "calculation_timestamp": "2024-12-27T12:34:19.996744",
+      "calculation_method": "Direct mapping from MedicalVerifiabilityModule",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "verifiability_quality": 0.1
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1481773105817874",
+      "metric_name": "certification",
+      "metric_value": 0.2,
+      "metric_factor": "alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "calculation_timestamp": "2024-12-27T12:34:20.000096",
+      "processing_time_ms": 0,
+      "calculation_method": "Certification = alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "quality_metadata": {
+        "education_quality": 0.2,
+        "profession_quality": 0.2,
+        "alpha": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1481773105817874",
+      "metric_name": "confidence",
+      "metric_value": 0.27683090286032946,
+      "metric_factor": "alpha * influence + (1 - alpha) * log(audience_size + 1) / log(max_audience_size + 1)",
+      "calculation_timestamp": "2024-12-27T12:34:20.003596",
+      "calculation_method": "Confidence = 0.7 * influence + 0.30000000000000004 * Normalized Audience Size",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "influence": 0.0,
+        "audience_size": 41100,
+        "normalized_audience_size": 0.9227696762010981,
+        "alpha": 0.7,
+        "max_audience_size": 100000
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1481773105817874",
+      "metric_name": "trustworthiness",
+      "metric_value": 0.17536618057206593,
+      "metric_factor": "0.4 * access_to_source_data + 0.4 * certification + 0.2 * confidence",
+      "calculation_timestamp": "2024-12-27T12:34:20.007432",
+      "processing_time_ms": 0,
+      "calculation_method": "trustworthiness = 0.4 * Access to Source Data + 0.4 * Certification + 0.2 * Confidence",
+      "quality_metadata": {
+        "access_to_source_data": 0.1,
+        "certification": 0.2,
+        "confidence": 0.27683090286032946
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1481773105817874",
+      "metric_name": "credibility",
+      "metric_value": 0.17536618057206593,
+      "metric_factor": "0 * trustworthiness_path_stability + 1 * trustworthiness",
+      "calculation_timestamp": "2024-12-27T14:05:32.748987",
+      "processing_time_ms": 0,
+      "calculation_method": "credibility = 0 * Trustworthiness_Path_Stability + 1 * Trustworthiness",
+      "quality_metadata": {
+        "trustworthiness_path_stability": 0,
+        "trustworthiness": 0.17536618057206593
+      },
+      "remarks": "trustworthiness_path_stability no encontrada; se asignó peso 0."
+    }
+  ],
+  "features": {
+    "generated_features": [
+      {
+        "module_name": "MedicalEducationModule",
+        "feature_name": "education",
+        "feature_value": "Naturópata",
+        "confidence_level": 0.2,
+        "feature_details": {
+          "description": "Generated education based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:18.386428",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1345
+        }
+      },
+      {
+        "module_name": "MedicalVerifiabilityModule",
+        "feature_name": "medicalVerifiability",
+        "feature_value": "Baja (ninguna universidad, hospital u otra organización reconocida mencionada)",
+        "confidence_level": 0.1,
+        "feature_details": {
+          "description": "Generated medicalVerifiability based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:19.821502",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1389
+        }
+      },
+      {
+        "module_name": "MedicalProfessionModule",
+        "feature_name": "profession",
+        "feature_value": "Naturópata",
+        "confidence_level": 0.2,
+        "feature_details": {
+          "description": "Generated medical profession based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:21.155907",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1320
+        }
+      },
+      {
+        "module_name": "MedicalInfluenceModule",
+        "feature_name": "influence",
+        "feature_value": "Índice de influencia no disponible.",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated influence based on user recommendations."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:22.549606",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1386
+        }
+      }
+    ]
+  }
+}

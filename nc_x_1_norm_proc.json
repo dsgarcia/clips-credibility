@@ -1,0 +1,217 @@
+{
+  "clip": {
+    "identification": {
+      "clip_id": "1869487217728463162",
+      "platform": "X",
+      "clip_url": "https://x.com/vinetur/status/1869487217728463162"
+    },
+    "content": {
+      "message": "El vino, mejor que las estatinas para el corazón, según el Hospital Clínic Barcelona\n\nEstudio de la Universidad de Barcelona y el Hospital Clínic Barcelona arroja resultados sorprendentes.\n\nvinetur.com/2024121883684/…",
+      "message_type": "image"
+    },
+    "dates": {
+      "creation_date": "2024-12-18T17:57:00",
+      "update_time": null
+    },
+    "geolocation": {
+      "has_geo_data": false,
+      "coordinates": {
+        "longitude": null,
+        "latitude": null
+      }
+    },
+    "interaction": {
+      "hashtags": [],
+      "links": [
+        "https://vinetur.com/2024121883684/"
+      ],
+      "mentions": [],
+      "reactions_breakdown": {
+        "like": 2,
+        "love": null,
+        "angry": null,
+        "other": null
+      }
+    },
+    "multimedia": {
+      "media_id": "image-20241218-219",
+      "duration": null,
+      "audio_track": null
+    },
+    "comments": [],
+    "performance_metrics": {
+      "view_count": 219,
+      "impression_count": null
+    },
+    "metadata": {
+      "extraction_metadata": {
+        "extracted_at": "2024-12-21T15:55:00",
+        "processing_time_ms": null,
+        "source_details": "Captured from X post"
+      }
+    },
+    "features": {
+      "generated_features": []
+    }
+  },
+  "user": {
+    "identification": {
+      "user_id": "vinetur",
+      "name": "Vinetur"
+    },
+    "personal_information": {
+      "full_name": null,
+      "is_private": false,
+      "location": "España",
+      "audience_size": 32200
+    },
+    "contact": {
+      "business_contact_method": null,
+      "public_email": null,
+      "websites": [
+        "https://vinetur.com"
+      ]
+    },
+    "biography": "La revista digital del vino",
+    "experience_and_education": {
+      "experience": [],
+      "education": []
+    }
+  },
+  "quality_metrics": [
+    {
+      "clip_id": "1869487217728463162",
+      "metric_name": "access_to_source_data",
+      "metric_value": 0.1,
+      "metric_factor": "verifiability_quality",
+      "calculation_timestamp": "2024-12-27T12:34:20.071445",
+      "calculation_method": "Direct mapping from MedicalVerifiabilityModule",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "verifiability_quality": 0.1
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1869487217728463162",
+      "metric_name": "certification",
+      "metric_value": 0.04000000000000001,
+      "metric_factor": "alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "calculation_timestamp": "2024-12-27T12:34:20.074707",
+      "processing_time_ms": 0,
+      "calculation_method": "Certification = alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "quality_metadata": {
+        "education_quality": 0.0,
+        "profession_quality": 0.1,
+        "alpha": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1869487217728463162",
+      "metric_name": "confidence",
+      "metric_value": 0.2704719266058046,
+      "metric_factor": "alpha * influence + (1 - alpha) * log(audience_size + 1) / log(max_audience_size + 1)",
+      "calculation_timestamp": "2024-12-27T12:34:20.078260",
+      "calculation_method": "Confidence = 0.7 * influence + 0.30000000000000004 * Normalized Audience Size",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "influence": 0.0,
+        "audience_size": 32200,
+        "normalized_audience_size": 0.9015730886860152,
+        "alpha": 0.7,
+        "max_audience_size": 100000
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1869487217728463162",
+      "metric_name": "trustworthiness",
+      "metric_value": 0.11009438532116093,
+      "metric_factor": "0.4 * access_to_source_data + 0.4 * certification + 0.2 * confidence",
+      "calculation_timestamp": "2024-12-27T12:34:20.082197",
+      "processing_time_ms": 0,
+      "calculation_method": "trustworthiness = 0.4 * Access to Source Data + 0.4 * Certification + 0.2 * Confidence",
+      "quality_metadata": {
+        "access_to_source_data": 0.1,
+        "certification": 0.04000000000000001,
+        "confidence": 0.2704719266058046
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1869487217728463162",
+      "metric_name": "credibility",
+      "metric_value": 0.11009438532116093,
+      "metric_factor": "0 * trustworthiness_path_stability + 1 * trustworthiness",
+      "calculation_timestamp": "2024-12-27T14:05:32.771410",
+      "processing_time_ms": 0,
+      "calculation_method": "credibility = 0 * Trustworthiness_Path_Stability + 1 * Trustworthiness",
+      "quality_metadata": {
+        "trustworthiness_path_stability": 0,
+        "trustworthiness": 0.11009438532116093
+      },
+      "remarks": "trustworthiness_path_stability no encontrada; se asignó peso 0."
+    }
+  ],
+  "features": {
+    "generated_features": [
+      {
+        "module_name": "MedicalEducationModule",
+        "feature_name": "education",
+        "feature_value": "Ninguno",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated education based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:45.991200",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1257
+        }
+      },
+      {
+        "module_name": "MedicalVerifiabilityModule",
+        "feature_name": "medicalVerifiability",
+        "feature_value": "Bajo (Universidad de Barcelona y Hospital Clínic Barcelona mencionados en el mensaje, pero sin verificación de la afiliación del usuario a ninguna institución médica.)",
+        "confidence_level": 0.1,
+        "feature_details": {
+          "description": "Generated medicalVerifiability based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:47.535255",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1535
+        }
+      },
+      {
+        "module_name": "MedicalProfessionModule",
+        "feature_name": "profession",
+        "feature_value": "Ninguno",
+        "confidence_level": 0.1,
+        "feature_details": {
+          "description": "Generated medical profession based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:48.848552",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1301
+        }
+      },
+      {
+        "module_name": "MedicalInfluenceModule",
+        "feature_name": "influence",
+        "feature_value": "0 (sin recomendaciones)",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated influence based on user recommendations."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:50.225170",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1369
+        }
+      }
+    ]
+  }
+}

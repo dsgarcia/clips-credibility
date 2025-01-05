@@ -1,0 +1,228 @@
+{
+  "clip": {
+    "identification": {
+      "clip_id": "ZMkresAKX",
+      "platform": "TikTok",
+      "clip_url": "https://www.tiktok.com/@felizmenteinmune/video/7405361733751049477"
+    },
+    "content": {
+      "message": "Mejora tu salud con los consejos del Dr. Ludwig Johnson: bajar de peso, prevenir enfermedades, para la diabetes y más... Consejos para colesterol alto 🙌 obtén la OFERTA de los libros 📚 digitales ingresando al enlace de nuestro perfil #drludwigjohnson #librosludwigjohnson #magnesio #colesterolalto #bajarcolesterol #vidasanaa #sanaahora #metabolismo #adelgazarsano #bajarcolesterolytrigliceridos",
+      "message_type": "video"
+    },
+    "dates": {
+      "creation_date": "2024-12-21T13:47:00",
+      "update_time": null
+    },
+    "geolocation": {
+      "has_geo_data": false,
+      "coordinates": {
+        "longitude": null,
+        "latitude": null
+      }
+    },
+    "interaction": {
+      "hashtags": [
+        "#drludwigjohnson",
+        "#librosludwigjohnson",
+        "#magnesio",
+        "#colesterolalto",
+        "#bajarcolesterol",
+        "#vidasanaa",
+        "#sanaahora",
+        "#metabolismo",
+        "#adelgazarsano",
+        "#bajarcolesterolytrigliceridos"
+      ],
+      "links": [
+        "https://linktr.ee/felizmenteinmune"
+      ],
+      "mentions": [],
+      "reactions_breakdown": {
+        "like": 645,
+        "love": null,
+        "angry": null,
+        "other": null
+      }
+    },
+    "multimedia": {
+      "media_id": "video-felizinmune-1",
+      "duration": null,
+      "audio_track": null
+    },
+    "comments": [],
+    "performance_metrics": {
+      "view_count": 2976,
+      "impression_count": null
+    },
+    "metadata": {
+      "extraction_metadata": {
+        "extracted_at": "2024-12-21T14:00:00",
+        "processing_time_ms": 50,
+        "source_details": "TikTok API"
+      }
+    },
+    "features": {
+      "generated_features": []
+    }
+  },
+  "user": {
+    "identification": {
+      "user_id": "@felizmenteinmune",
+      "name": "Felizmente Inmune"
+    },
+    "personal_information": {
+      "full_name": null,
+      "is_private": false,
+      "location": null,
+      "audience_size": 118800
+    },
+    "contact": {
+      "business_contact_method": null,
+      "public_email": null,
+      "websites": [
+        "https://linktr.ee/felizmenteinmune"
+      ]
+    },
+    "biography": "Adquiere OFERTA combo-Libros 📚 Digitales del Dr. Ludwig Johnson aquí 👇",
+    "experience_and_education": {
+      "experience": [],
+      "education": []
+    }
+  },
+  "quality_metrics": [
+    {
+      "clip_id": "ZMkresAKX",
+      "metric_name": "access_to_source_data",
+      "metric_value": 0.2,
+      "metric_factor": "verifiability_quality",
+      "calculation_timestamp": "2024-12-27T12:34:20.041067",
+      "calculation_method": "Direct mapping from MedicalVerifiabilityModule",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "verifiability_quality": 0.2
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "ZMkresAKX",
+      "metric_name": "certification",
+      "metric_value": 0.56,
+      "metric_factor": "alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "calculation_timestamp": "2024-12-27T12:34:20.044455",
+      "processing_time_ms": 0,
+      "calculation_method": "Certification = alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "quality_metadata": {
+        "education_quality": 0.8,
+        "profession_quality": 0.2,
+        "alpha": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "ZMkresAKX",
+      "metric_name": "confidence",
+      "metric_value": 0.30448894130402315,
+      "metric_factor": "alpha * influence + (1 - alpha) * log(audience_size + 1) / log(max_audience_size + 1)",
+      "calculation_timestamp": "2024-12-27T12:34:20.048000",
+      "calculation_method": "Confidence = 0.7 * influence + 0.30000000000000004 * Normalized Audience Size",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "influence": 0.0,
+        "audience_size": 118800,
+        "normalized_audience_size": 1.014963137680077,
+        "alpha": 0.7,
+        "max_audience_size": 100000
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "ZMkresAKX",
+      "metric_name": "trustworthiness",
+      "metric_value": 0.36489778826080466,
+      "metric_factor": "0.4 * access_to_source_data + 0.4 * certification + 0.2 * confidence",
+      "calculation_timestamp": "2024-12-27T12:34:20.051975",
+      "processing_time_ms": 0,
+      "calculation_method": "trustworthiness = 0.4 * Access to Source Data + 0.4 * Certification + 0.2 * Confidence",
+      "quality_metadata": {
+        "access_to_source_data": 0.2,
+        "certification": 0.56,
+        "confidence": 0.30448894130402315
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "ZMkresAKX",
+      "metric_name": "credibility",
+      "metric_value": 0.36489778826080466,
+      "metric_factor": "0 * trustworthiness_path_stability + 1 * trustworthiness",
+      "calculation_timestamp": "2024-12-27T14:05:32.762515",
+      "processing_time_ms": 0,
+      "calculation_method": "credibility = 0 * Trustworthiness_Path_Stability + 1 * Trustworthiness",
+      "quality_metadata": {
+        "trustworthiness_path_stability": 0,
+        "trustworthiness": 0.36489778826080466
+      },
+      "remarks": "trustworthiness_path_stability no encontrada; se asignó peso 0."
+    }
+  ],
+  "features": {
+    "generated_features": [
+      {
+        "module_name": "MedicalEducationModule",
+        "feature_name": "education",
+        "feature_value": "Doctor",
+        "confidence_level": 0.8,
+        "feature_details": {
+          "description": "Generated education based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:34.209333",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1281
+        }
+      },
+      {
+        "module_name": "MedicalVerifiabilityModule",
+        "feature_name": "medicalVerifiability",
+        "feature_value": "Baja (Ninguna universidad, hospital u otra organización reconocida es mencionada en el perfil.  Solo se menciona el \"Dr. Ludwig Johnson\" sin ninguna evidencia de verificación independiente.)",
+        "confidence_level": 0.2,
+        "feature_details": {
+          "description": "Generated medicalVerifiability based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:35.890366",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1669
+        }
+      },
+      {
+        "module_name": "MedicalProfessionModule",
+        "feature_name": "profession",
+        "feature_value": "Doctor",
+        "confidence_level": 0.2,
+        "feature_details": {
+          "description": "Generated medical profession based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:37.173442",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1270
+        }
+      },
+      {
+        "module_name": "MedicalInfluenceModule",
+        "feature_name": "influence",
+        "feature_value": "Índice no disponible debido a la falta de recomendaciones.",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated influence based on user recommendations."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:39.164037",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1983
+        }
+      }
+    ]
+  }
+}

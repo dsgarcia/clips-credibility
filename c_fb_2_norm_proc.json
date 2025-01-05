@@ -1,0 +1,226 @@
+{
+  "clip": {
+    "identification": {
+      "clip_id": "1114755060366300",
+      "platform": "Facebook",
+      "clip_url": "https://www.facebook.com/reel/1114755060366300"
+    },
+    "content": {
+      "message": "Las estatinas son los medicamentos más usados para reducir el colesterol pero también se los indicamos para el tratamiento de la aterosclerosis. 🌟\n\n💖 Ayudan a proteger las arterias y prevenir eventos cardiovasculares",
+      "message_type": "video"
+    },
+    "dates": {
+      "creation_date": null,
+      "update_time": null
+    },
+    "geolocation": {
+      "has_geo_data": false,
+      "coordinates": {
+        "longitude": null,
+        "latitude": null
+      }
+    },
+    "interaction": {
+      "hashtags": [
+        "#cardiología",
+        "#salud",
+        "#colesterol",
+        "#corazon",
+        "#colesterolmalo",
+        "#estatinas"
+      ],
+      "links": [],
+      "mentions": [],
+      "reactions_breakdown": {
+        "like": 34,
+        "love": null,
+        "angry": null,
+        "other": null
+      }
+    },
+    "multimedia": {
+      "media_id": null,
+      "duration": null,
+      "audio_track": null
+    },
+    "comments": [],
+    "performance_metrics": {
+      "view_count": null,
+      "impression_count": null
+    },
+    "metadata": {
+      "extraction_metadata": {
+        "extracted_at": null,
+        "processing_time_ms": null,
+        "source_details": "Facebook API"
+      }
+    },
+    "features": {
+      "generated_features": []
+    },
+    "recommendations": []
+  },
+  "user": {
+    "identification": {
+      "user_id": null,
+      "name": "Irina Hiskin"
+    },
+    "personal_information": {
+      "full_name": null,
+      "is_private": false,
+      "location": "Pincén, Córdoba, Argentina",
+      "audience_size": 4997
+    },
+    "contact": {
+      "business_contact_method": null,
+      "public_email": null
+    },
+    "biography": null,
+    "experience_and_education": {
+      "experience": [
+        "Cardióloga en Cardiología Hiskin desde Noviembre de 2020",
+        "Cardióloga en Hospital Provincial Dr René Favaloro 'In Memoriam' desde 21 de noviembre de 2020",
+        "Maestría en Diabetes en Facultad de Ciencias Biomédicas - Universidad Austral desde 31 de octubre de 2020"
+      ],
+      "education": [
+        "Estudió en U.N.R."
+      ]
+    }
+  },
+  "quality_metrics": [
+    {
+      "clip_id": "1114755060366300",
+      "metric_name": "access_to_source_data",
+      "metric_value": 0.6,
+      "metric_factor": "verifiability_quality",
+      "calculation_timestamp": "2024-12-27T12:34:20.056295",
+      "calculation_method": "Direct mapping from MedicalVerifiabilityModule",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "verifiability_quality": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1114755060366300",
+      "metric_name": "certification",
+      "metric_value": 1.0,
+      "metric_factor": "alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "calculation_timestamp": "2024-12-27T12:34:20.059649",
+      "processing_time_ms": 0,
+      "calculation_method": "Certification = alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "quality_metadata": {
+        "education_quality": 1.0,
+        "profession_quality": 1.0,
+        "alpha": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1114755060366300",
+      "metric_name": "confidence",
+      "metric_value": 0.22192758234454094,
+      "metric_factor": "alpha * influence + (1 - alpha) * log(audience_size + 1) / log(max_audience_size + 1)",
+      "calculation_timestamp": "2024-12-27T12:34:20.063304",
+      "calculation_method": "Confidence = 0.7 * influence + 0.30000000000000004 * Normalized Audience Size",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "influence": 0.0,
+        "audience_size": 4997,
+        "normalized_audience_size": 0.7397586078151364,
+        "alpha": 0.7,
+        "max_audience_size": 100000
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1114755060366300",
+      "metric_name": "trustworthiness",
+      "metric_value": 0.6843855164689082,
+      "metric_factor": "0.4 * access_to_source_data + 0.4 * certification + 0.2 * confidence",
+      "calculation_timestamp": "2024-12-27T12:34:20.067225",
+      "processing_time_ms": 0,
+      "calculation_method": "trustworthiness = 0.4 * Access to Source Data + 0.4 * Certification + 0.2 * Confidence",
+      "quality_metadata": {
+        "access_to_source_data": 0.6,
+        "certification": 1.0,
+        "confidence": 0.22192758234454094
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1114755060366300",
+      "metric_name": "credibility",
+      "metric_value": 0.6843855164689082,
+      "metric_factor": "0 * trustworthiness_path_stability + 1 * trustworthiness",
+      "calculation_timestamp": "2024-12-27T14:05:32.766838",
+      "processing_time_ms": 0,
+      "calculation_method": "credibility = 0 * Trustworthiness_Path_Stability + 1 * Trustworthiness",
+      "quality_metadata": {
+        "trustworthiness_path_stability": 0,
+        "trustworthiness": 0.6843855164689082
+      },
+      "remarks": "trustworthiness_path_stability no encontrada; se asignó peso 0."
+    }
+  ],
+  "features": {
+    "generated_features": [
+      {
+        "module_name": "MedicalEducationModule",
+        "feature_name": "education",
+        "feature_value": "Cardióloga, Maestría en Diabetes",
+        "confidence_level": 1.0,
+        "feature_details": {
+          "description": "Generated education based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:40.485203",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1316
+        }
+      },
+      {
+        "module_name": "MedicalVerifiabilityModule",
+        "feature_name": "medicalVerifiability",
+        "feature_value": "Media (Hospital Provincial Dr René Favaloro 'In Memoriam', Facultad de Ciencias Biomédicas - Universidad Austral, U.N.R.)",
+        "confidence_level": 0.6,
+        "feature_details": {
+          "description": "Generated medicalVerifiability based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:42.011018",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1520
+        }
+      },
+      {
+        "module_name": "MedicalProfessionModule",
+        "feature_name": "profession",
+        "feature_value": "Cardióloga",
+        "confidence_level": 1.0,
+        "feature_details": {
+          "description": "Generated medical profession based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:43.316918",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1288
+        }
+      },
+      {
+        "module_name": "MedicalInfluenceModule",
+        "feature_name": "influence",
+        "feature_value": "0, sin recomendaciones disponibles.",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated influence based on user recommendations."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:44.725659",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1402
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "clip": {
+    "identification": {
+      "clip_id": "1857470966085071153",
+      "platform": "X",
+      "clip_url": "https://x.com/papayaykware/status/1857470966085071153"
+    },
+    "content": {
+      "message": "Estatinas: efectos adversos como miotoxicidad, alteraciones hepáticas, cataratas, trastornos del estado de ánimo, demencias, accidente cerebrovascular hemorrágico, neuropatía periférica y un mayor riesgo de diabetes mellitus",
+      "message_type": "text"
+    },
+    "dates": {
+      "creation_date": "2024-11-15T14:09:00",
+      "update_time": null
+    },
+    "geolocation": {
+      "has_geo_data": false,
+      "coordinates": {
+        "longitude": null,
+        "latitude": null
+      }
+    },
+    "interaction": {
+      "hashtags": [],
+      "links": [
+        "https://papayaykware.blogspot.com/2024/11/estatinas-efectos-adversos-como.html"
+      ],
+      "mentions": [],
+      "reactions_breakdown": {
+        "like": null,
+        "love": null,
+        "angry": null,
+        "other": 1
+      }
+    },
+    "multimedia": {
+      "media_id": null,
+      "duration": null,
+      "audio_track": null
+    },
+    "comments": [],
+    "performance_metrics": {
+      "view_count": 102,
+      "impression_count": null
+    },
+    "metadata": {
+      "extraction_metadata": {
+        "extracted_at": "2024-12-21T16:10:00",
+        "processing_time_ms": null,
+        "source_details": "Extracted from X"
+      }
+    },
+    "features": {
+      "generated_features": []
+    }
+  },
+  "user": {
+    "identification": {
+      "user_id": "papayaykware",
+      "name": "Javi Ciborro"
+    },
+    "personal_information": {
+      "full_name": null,
+      "is_private": false,
+      "location": "Santa Cruz de Tenerife, España",
+      "audience_size": 8205
+    },
+    "contact": {
+      "business_contact_method": null,
+      "public_email": null,
+      "websites": [
+        "https://papayaykware.blogspot.com"
+      ]
+    },
+    "biography": "hijos de Dios sin mancha en medio de una generación maligna y perversa, en medio de la cual resplandecéis como luminares en el mundo",
+    "experience_and_education": {
+      "experience": [],
+      "education": []
+    }
+  },
+  "quality_metrics": [
+    {
+      "clip_id": "1857470966085071153",
+      "metric_name": "access_to_source_data",
+      "metric_value": 0.1,
+      "metric_factor": "verifiability_quality",
+      "calculation_timestamp": "2024-12-27T12:34:19.981919",
+      "calculation_method": "Direct mapping from MedicalVerifiabilityModule",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "verifiability_quality": 0.1
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1857470966085071153",
+      "metric_name": "certification",
+      "metric_value": 0.0,
+      "metric_factor": "alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "calculation_timestamp": "2024-12-27T12:34:19.985300",
+      "processing_time_ms": 0,
+      "calculation_method": "Certification = alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "quality_metadata": {
+        "education_quality": 0.0,
+        "profession_quality": 0.0,
+        "alpha": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1857470966085071153",
+      "metric_name": "confidence",
+      "metric_value": 0.23484768677276466,
+      "metric_factor": "alpha * influence + (1 - alpha) * log(audience_size + 1) / log(max_audience_size + 1)",
+      "calculation_timestamp": "2024-12-27T12:34:19.988626",
+      "calculation_method": "Confidence = 0.7 * influence + 0.30000000000000004 * Normalized Audience Size",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "influence": 0.0,
+        "audience_size": 8205,
+        "normalized_audience_size": 0.7828256225758821,
+        "alpha": 0.7,
+        "max_audience_size": 100000
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1857470966085071153",
+      "metric_name": "trustworthiness",
+      "metric_value": 0.08696953735455294,
+      "metric_factor": "0.4 * access_to_source_data + 0.4 * certification + 0.2 * confidence",
+      "calculation_timestamp": "2024-12-27T12:34:19.992236",
+      "processing_time_ms": 0,
+      "calculation_method": "trustworthiness = 0.4 * Access to Source Data + 0.4 * Certification + 0.2 * Confidence",
+      "quality_metadata": {
+        "access_to_source_data": 0.1,
+        "certification": 0.0,
+        "confidence": 0.23484768677276466
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1857470966085071153",
+      "metric_name": "credibility",
+      "metric_value": 0.08696953735455294,
+      "metric_factor": "0 * trustworthiness_path_stability + 1 * trustworthiness",
+      "calculation_timestamp": "2024-12-27T14:05:32.744620",
+      "processing_time_ms": 0,
+      "calculation_method": "credibility = 0 * Trustworthiness_Path_Stability + 1 * Trustworthiness",
+      "quality_metadata": {
+        "trustworthiness_path_stability": 0,
+        "trustworthiness": 0.08696953735455294
+      },
+      "remarks": "trustworthiness_path_stability no encontrada; se asignó peso 0."
+    },
+    {
+      "clip_id": "1857470966085071153",
+      "metric_name": "credibility",
+      "metric_value": 0.08696953735455294,
+      "metric_factor": "0 * trustworthiness_path_stability + 1 * trustworthiness",
+      "calculation_timestamp": "2024-12-30T19:49:37.213029",
+      "processing_time_ms": 0,
+      "calculation_method": "credibility = 0 * Trustworthiness_Path_Stability + 1 * Trustworthiness",
+      "quality_metadata": {
+        "trustworthiness_path_stability": 0,
+        "trustworthiness": 0.08696953735455294
+      },
+      "remarks": "trustworthiness_path_stability no encontrada; se asignó peso 0."
+    }
+  ],
+  "features": {
+    "generated_features": [
+      {
+        "module_name": "MedicalEducationModule",
+        "feature_name": "education",
+        "feature_value": "Desconocido",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated education based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:13.018644",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1269
+        }
+      },
+      {
+        "module_name": "MedicalVerifiabilityModule",
+        "feature_name": "medicalVerifiability",
+        "feature_value": "Bajo (Ninguna institución médica o universidad mencionada)",
+        "confidence_level": 0.1,
+        "feature_details": {
+          "description": "Generated medicalVerifiability based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:14.456124",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1429
+        }
+      },
+      {
+        "module_name": "MedicalProfessionModule",
+        "feature_name": "profession",
+        "feature_value": "Ninguno",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated medical profession based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:15.733815",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1268
+        }
+      },
+      {
+        "module_name": "MedicalInfluenceModule",
+        "feature_name": "influence",
+        "feature_value": "No data available",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated influence based on user recommendations."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:17.033563",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1291
+        }
+      }
+    ]
+  }
+}

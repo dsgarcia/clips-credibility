@@ -1,0 +1,246 @@
+{
+  "clip": {
+    "identification": {
+      "clip_id": "1864061407672631504",
+      "platform": "X",
+      "clip_url": "https://x.com/JonathanNefro/status/1864061407672631504"
+    },
+    "content": {
+      "message": "En diálisis y con colesterol LDL >70mg/dL, iniciar con estatinas y mantenerlas por largo tiempo, comparado a no hacerlo, se asoció a ↓22% el evento cardiovascular mayor y ↓20% todas las causas de muerte\n\nEn emulación de ensayo clínico\n\nJASN 2024\n10.1681/ASN.0000000554",
+      "message_type": "texto"
+    },
+    "dates": {
+      "creation_date": "2024-12-03T18:37:00",
+      "update_time": null
+    },
+    "geolocation": {
+      "has_geo_data": false,
+      "coordinates": {
+        "longitude": null,
+        "latitude": null
+      }
+    },
+    "interaction": {
+      "hashtags": [],
+      "links": [],
+      "mentions": [],
+      "reactions_breakdown": {
+        "like": 29,
+        "love": null,
+        "angry": null,
+        "other": 72
+      }
+    },
+    "multimedia": {
+      "media_id": "image_001",
+      "duration": null,
+      "audio_track": null
+    },
+    "comments": [],
+    "performance_metrics": {
+      "view_count": 3048,
+      "impression_count": null
+    },
+    "metadata": {
+      "extraction_metadata": {
+        "extracted_at": "2024-12-21T16:00:00",
+        "processing_time_ms": 500,
+        "source_details": "Extracted from X"
+      }
+    },
+    "features": {
+      "generated_features": []
+    }
+  },
+  "user": {
+    "identification": {
+      "user_id": "JonathanNefro",
+      "name": "Jonathan Chávez"
+    },
+    "personal_information": {
+      "full_name": "Jonathan Chávez",
+      "is_private": false,
+      "location": null,
+      "audience_size": 35000
+    },
+    "contact": {
+      "business_contact_method": null,
+      "public_email": null,
+      "websites": []
+    },
+    "biography": "Nefrólogo en Hospital Civil de Guadalajara y Profesor en la Escuela de Medicina de la Universidad de Guadalajara",
+    "experience_and_education": {
+      "experience": [
+        "Medicina y Salud"
+      ],
+      "education": []
+    }
+  },
+  "quality_metrics": [
+    {
+      "clip_id": "1864061407672631504",
+      "metric_name": "access_to_source_data",
+      "metric_value": 0.6,
+      "metric_factor": "verifiability_quality",
+      "calculation_timestamp": "2024-12-27T12:34:20.086087",
+      "calculation_method": "Direct mapping from MedicalVerifiabilityModule",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "verifiability_quality": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1864061407672631504",
+      "metric_name": "confidence",
+      "metric_value": 0.27264459034030897,
+      "metric_factor": "alpha * influence + (1 - alpha) * log(audience_size + 1) / log(max_audience_size + 1)",
+      "calculation_timestamp": "2024-12-27T12:34:20.091781",
+      "calculation_method": "Confidence = 0.7 * influence + 0.30000000000000004 * Normalized Audience Size",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "influence": 0.0,
+        "audience_size": 35000,
+        "normalized_audience_size": 0.9088153011343632,
+        "alpha": 0.7,
+        "max_audience_size": 100000
+      },
+      "remarks": null
+    },
+    {
+      "metric_name": "trustworthiness_path_stability",
+      "metric_value": 0.8288,
+      "calculation_timestamp": "2024-12-30T19:47:38.519992",
+      "processing_time_ms": 5,
+      "calculation_method": "1 - avg(|T(i+1) - T(i)|)",
+      "trustworthiness_values": [
+        0.05600000000000001,
+        0.376,
+        0.4000000000000001,
+        0.392,
+        0.504,
+        0.3600000000000001,
+        0.44800000000000006,
+        0.04000000000000001,
+        0.376,
+        0.44800000000000006,
+        0.10400000000000002,
+        0.40000000000000013,
+        0.376,
+        0.04000000000000001,
+        0.136,
+        0.04000000000000001,
+        0.192,
+        0.4000000000000001,
+        0.4000000000000001,
+        0.29600000000000004,
+        0.04000000000000001
+      ],
+      "remarks": null
+    },
+    {
+      "clip_id": "1864061407672631504",
+      "metric_name": "certification",
+      "metric_value": 1.0,
+      "metric_factor": "alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "calculation_timestamp": "2025-01-04T15:54:55.342336",
+      "processing_time_ms": 0,
+      "calculation_method": "Certification = alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "quality_metadata": {
+        "education_quality": 1.0,
+        "profession_quality": 1.0,
+        "alpha": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1864061407672631504",
+      "metric_name": "trustworthiness",
+      "metric_value": 0.6945289180680618,
+      "metric_factor": "0.4 * access_to_source_data + 0.4 * certification + 0.2 * confidence",
+      "calculation_timestamp": "2025-01-04T15:55:31.291259",
+      "processing_time_ms": 0,
+      "calculation_method": "trustworthiness = 0.4 * Access to Source Data + 0.4 * Certification + 0.2 * Confidence",
+      "quality_metadata": {
+        "access_to_source_data": 0.6,
+        "certification": 1.0,
+        "confidence": 0.27264459034030897
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "1864061407672631504",
+      "metric_name": "credibility",
+      "metric_value": 0.7750915672272247,
+      "metric_factor": "0.6 * trustworthiness_path_stability + 0.4 * trustworthiness",
+      "calculation_timestamp": "2025-01-04T15:56:23.290725",
+      "processing_time_ms": 0,
+      "calculation_method": "credibility = 0.6 * Trustworthiness_Path_Stability + 0.4 * Trustworthiness",
+      "quality_metadata": {
+        "trustworthiness_path_stability": 0.8288,
+        "trustworthiness": 0.6945289180680618
+      },
+      "remarks": null
+    }
+  ],
+  "features": {
+    "generated_features": [
+      {
+        "module_name": "MedicalEducationModule",
+        "feature_name": "education",
+        "feature_value": "Nefrólogo",
+        "confidence_level": 1.0,
+        "feature_details": {
+          "description": "Generated education based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:51.552269",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1314
+        }
+      },
+      {
+        "module_name": "MedicalVerifiabilityModule",
+        "feature_name": "medicalVerifiability",
+        "feature_value": "Medio (Hospital Civil de Guadalajara, Universidad de Guadalajara)",
+        "confidence_level": 0.6,
+        "feature_details": {
+          "description": "Generated medicalVerifiability based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:52.990743",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1426
+        }
+      },
+      {
+        "module_name": "MedicalInfluenceModule",
+        "feature_name": "influence",
+        "feature_value": "Índice de influencia no disponible.",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated influence based on user recommendations."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:55.651156",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1348
+        }
+      },
+      {
+        "module_name": "MedicalProfessionModule",
+        "feature_name": "profession",
+        "feature_value": "Nefrólogo",
+        "confidence_level": 1.0,
+        "feature_details": {
+          "description": "Generated medical profession based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2025-01-04T15:52:02.472773",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1024
+        }
+      }
+    ]
+  }
+}

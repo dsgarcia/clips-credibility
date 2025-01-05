@@ -1,0 +1,139 @@
+{
+  "clip": {
+    "identification": {
+      "clip_id": "ZMkresAKX",
+      "platform": "TikTok",
+      "clip_url": "https://vm.tiktok.com/ZMkresAKX/"
+    },
+    "content": {
+      "message": "Mejora tu salud con los consejos del Dr. Ludwig Johnson: bajar de peso, prevenir enfermedades, para la diabetes y más... Consejos para colesterol alto 🙌 obtén la OFERTA de los libros 📚 digitales ingresando al enlace de nuestro perfil #drludwigjohnson #librosludwigjohnson #magnesio #colesterolalto #bajarcolesterol #vidasanaa #sanaahora #metabolismo #adelgazarsano #bajarcolesterolytrigliceridos",
+      "message_type": "video"
+    },
+    "dates": {
+      "creation_date": "2024-12-21T13:47:00",
+      "update_time": null
+    },
+    "geolocation": {
+      "has_geo_data": false,
+      "coordinates": {
+        "longitude": null,
+        "latitude": null
+      }
+    },
+    "interaction": {
+      "hashtags": [
+        "#drludwigjohnson",
+        "#librosludwigjohnson",
+        "#magnesio",
+        "#colesterolalto",
+        "#bajarcolesterol",
+        "#vidasanaa",
+        "#sanaahora",
+        "#metabolismo",
+        "#adelgazarsano",
+        "#bajarcolesterolytrigliceridos"
+      ],
+      "links": [
+        "https://linktr.ee/felizmenteinmune"
+      ],
+      "mentions": [],
+      "reactions_breakdown": {
+        "like": 8740,
+        "love": null,
+        "angry": null,
+        "other": 292
+      }
+    },
+    "multimedia": {
+      "media_id": "video-felizinmune-1",
+      "duration": null,
+      "audio_track": null
+    },
+    "comments": [],
+    "performance_metrics": {
+      "view_count": 2976,
+      "impression_count": null
+    },
+    "metadata": {
+      "extraction_metadata": {
+        "extracted_at": "2024-12-21T14:00:00",
+        "processing_time_ms": 50,
+        "source_details": "TikTok API"
+      }
+    },
+    "features": {
+      "generated_features": []
+    }
+  },
+  "user": {
+    "identification": {
+      "user_id": "@felizmenteinmune",
+      "name": "Felizmente Inmune"
+    },
+    "personal_information": {
+      "full_name": null,
+      "is_private": false,
+      "location": null,
+      "audience_size": 2400000
+    },
+    "contact": {
+      "business_contact_method": null,
+      "public_email": null,
+      "websites": [
+        "https://linktr.ee/felizmenteinmune"
+      ]
+    },
+    "biography": "Adquiere OFERTA combo-Libros 📚 Digitales del Dr. Ludwig Johnson aquí 👇",
+    "experience_and_education": {
+      "experience": [],
+      "education": []
+    }
+  },
+  "quality_metrics": [],
+  "features": {
+    "generated_features": [
+      {
+        "module_name": "MedicalProfessionModule",
+        "feature_name": "profession",
+        "feature_value": "Médico",
+        "confidence_level": 0.8,
+        "feature_details": {
+          "description": "Generated medical profession based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-23T01:54:16.521109",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1511
+        }
+      },
+      {
+        "module_name": "MedicalEducationModule",
+        "feature_name": "education",
+        "feature_value": "Doctor",
+        "confidence_level": 0.8,
+        "feature_details": {
+          "description": "Generated education based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-23T02:00:25.094167",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 986
+        }
+      },
+      {
+        "module_name": "MedicalVerifiabilityModule",
+        "feature_name": "medicalVerifiability",
+        "feature_value": "Baja (Ninguna universidad, hospital u otra organización reconocida son mencionados)",
+        "confidence_level": 0.2,
+        "feature_details": {
+          "description": "Generated medicalVerifiability based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-23T02:19:47.606920",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1580
+        }
+      }
+    ]
+  }
+}

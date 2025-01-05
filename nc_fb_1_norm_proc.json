@@ -1,0 +1,218 @@
+{
+  "clip": {
+    "identification": {
+      "clip_id": "15hrR9GRiq",
+      "platform": "Facebook",
+      "clip_url": "https://www.facebook.com/share/r/15hrR9GRiq/"
+    },
+    "content": {
+      "message": "LA FARSA DEL COLESTEROL. CERO ESTATINAS ⚠️⚠️⚠️⚠️⚠️",
+      "message_type": "video"
+    },
+    "dates": {
+      "creation_date": null,
+      "update_time": "Reciente"
+    },
+    "geolocation": {
+      "has_geo_data": false,
+      "coordinates": {
+        "longitude": null,
+        "latitude": null
+      }
+    },
+    "interaction": {
+      "hashtags": [
+        "#repost",
+        "#colesterol",
+        "#ldl",
+        "#estatinas"
+      ],
+      "links": [],
+      "mentions": [
+        "@dr.carlosmonteverde_md"
+      ],
+      "reactions_breakdown": {
+        "like": 18700,
+        "comments": 466,
+        "shares": 10000
+      }
+    },
+    "multimedia": {
+      "media_id": null,
+      "duration": null,
+      "audio_track": null
+    },
+    "comments": [],
+    "performance_metrics": {
+      "view_count": null,
+      "impression_count": null
+    },
+    "metadata": {
+      "extraction_metadata": {
+        "extracted_at": null,
+        "processing_time_ms": null,
+        "source_details": "Facebook API"
+      }
+    },
+    "features": {
+      "generated_features": []
+    }
+  },
+  "user": {
+    "identification": {
+      "user_id": "1059802824093062",
+      "name": "Plataforma Doctor Heal"
+    },
+    "personal_information": {
+      "full_name": null,
+      "is_private": false,
+      "location": "1080",
+      "audience_size": 118000
+    },
+    "contact": {
+      "business_contact_method": null,
+      "public_email": "informacion@doctorhealweb.com"
+    },
+    "biography": "Plataforma online de medicina integrativa",
+    "experience_and_education": {
+      "experience": [],
+      "education": []
+    }
+  },
+  "quality_metrics": [
+    {
+      "clip_id": "15hrR9GRiq",
+      "metric_name": "access_to_source_data",
+      "metric_value": 0.0,
+      "metric_factor": "verifiability_quality",
+      "calculation_timestamp": "2024-12-27T12:34:19.948518",
+      "calculation_method": "Direct mapping from MedicalVerifiabilityModule",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "verifiability_quality": 0.0
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "15hrR9GRiq",
+      "metric_name": "certification",
+      "metric_value": 0.08000000000000002,
+      "metric_factor": "alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "calculation_timestamp": "2024-12-27T12:34:19.951738",
+      "processing_time_ms": 0,
+      "calculation_method": "Certification = alpha * Education Quality + (1 - alpha) * Profession Quality",
+      "quality_metadata": {
+        "education_quality": 0.0,
+        "profession_quality": 0.2,
+        "alpha": 0.6
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "15hrR9GRiq",
+      "metric_name": "confidence",
+      "metric_value": 0.30431287694364967,
+      "metric_factor": "alpha * influence + (1 - alpha) * log(audience_size + 1) / log(max_audience_size + 1)",
+      "calculation_timestamp": "2024-12-27T12:34:19.955314",
+      "calculation_method": "Confidence = 0.7 * influence + 0.30000000000000004 * Normalized Audience Size",
+      "processing_time_ms": 0,
+      "quality_metadata": {
+        "influence": 0.0,
+        "audience_size": 118000,
+        "normalized_audience_size": 1.0143762564788321,
+        "alpha": 0.7,
+        "max_audience_size": 100000
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "15hrR9GRiq",
+      "metric_name": "trustworthiness",
+      "metric_value": 0.09286257538872994,
+      "metric_factor": "0.4 * access_to_source_data + 0.4 * certification + 0.2 * confidence",
+      "calculation_timestamp": "2024-12-27T12:34:19.959098",
+      "processing_time_ms": 0,
+      "calculation_method": "trustworthiness = 0.4 * Access to Source Data + 0.4 * Certification + 0.2 * Confidence",
+      "quality_metadata": {
+        "access_to_source_data": 0.0,
+        "certification": 0.08000000000000002,
+        "confidence": 0.30431287694364967
+      },
+      "remarks": null
+    },
+    {
+      "clip_id": "15hrR9GRiq",
+      "metric_name": "credibility",
+      "metric_value": 0.09286257538872994,
+      "metric_factor": "0 * trustworthiness_path_stability + 1 * trustworthiness",
+      "calculation_timestamp": "2024-12-27T14:05:32.734032",
+      "processing_time_ms": 0,
+      "calculation_method": "credibility = 0 * Trustworthiness_Path_Stability + 1 * Trustworthiness",
+      "quality_metadata": {
+        "trustworthiness_path_stability": 0,
+        "trustworthiness": 0.09286257538872994
+      },
+      "remarks": "trustworthiness_path_stability no encontrada; se asignó peso 0."
+    }
+  ],
+  "features": {
+    "generated_features": [
+      {
+        "module_name": "MedicalEducationModule",
+        "feature_name": "education",
+        "feature_value": "Ninguno",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated education based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:01.133976",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1296
+        }
+      },
+      {
+        "module_name": "MedicalVerifiabilityModule",
+        "feature_name": "medicalVerifiability",
+        "feature_value": "Bajo (ninguna institución médica o universidad mencionada)",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated medicalVerifiability based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:03.082424",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1936
+        }
+      },
+      {
+        "module_name": "MedicalProfessionModule",
+        "feature_name": "profession",
+        "feature_value": "Médico Integrativo",
+        "confidence_level": 0.2,
+        "feature_details": {
+          "description": "Generated medical profession based on input profile."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:04.552821",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1457
+        }
+      },
+      {
+        "module_name": "MedicalInfluenceModule",
+        "feature_name": "influence",
+        "feature_value": "No se puede determinar.",
+        "confidence_level": 0.0,
+        "feature_details": {
+          "description": "Generated influence based on user recommendations."
+        },
+        "calculation_details": {
+          "calculated_at": "2024-12-27T12:33:05.933662",
+          "calculation_method": "Gemini Language Model (gemini-1.5-flash)",
+          "processing_time_ms": 1375
+        }
+      }
+    ]
+  }
+}
