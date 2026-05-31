@@ -1,0 +1,44 @@
+import requests
+import json
+
+# Configura tu Bearer Token aquí
+BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAANC0wAAAAAAATOF9fy%2BHXDd%2BLYmRTDcNHeqHYX0%3DZZPR0mM1qig4wWBSQ4i3hb0Z7j74YAOtb4yfMb0IxhKp98fmkG"
+
+# Función para obtener un tweet por ID y guardarlo como JSON
+def get_tweet_and_save_as_json(tweet_id):
+    url = f"https://api.twitter.com/2/tweets/{tweet_id}"
+    headers = {
+        "Authorization": f"Bearer {BEARER_TOKEN}",
+    }
+    params = {
+        "tweet.fields": "created_at,author_id,text",  # Campos adicionales que quieres obtener
+    }
+    response = requests.get(url, headers=headers, params=params)
+    
+    if response.status_code == 200:
+        tweet_data = response.json()
+        output_file = f"{tweet_id}.json"  # El nombre del archivo será el ID del tweet
+        # Guardar el tweet en un archivo JSON
+        with open(output_file, "w", encoding="utf-8") as file:
+            json.dump(tweet_data, file, indent=4, ensure_ascii=False)
+        print(f"Tweet {tweet_id} guardado exitosamente en {output_file}")
+    else:
+        print(f"Error al descargar el tweet {tweet_id}: {response.status_code} - {response.text}")
+
+# Función para manejar una lista de IDs de tweets
+def download_tweets(tweet_ids):
+    for tweet_id in tweet_ids:
+        get_tweet_and_save_as_json(tweet_id)
+
+# Ejemplo de uso
+tweet_ids = [
+    "1708206415184105684",  # Reemplaza con los IDs de los tweets que necesitas
+    "1836490561718460444",
+    "1856596084832776296"
+]
+
+
+
+download_tweets(tweet_ids)
+
+

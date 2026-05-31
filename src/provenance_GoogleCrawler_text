@@ -1,0 +1,76 @@
+import requests
+import json
+import re
+
+def normalize_text(text):
+    """
+    Normaliza el texto eliminando caracteres extraños como saltos de línea y espacios adicionales.
+
+    Args:
+        text (str): Texto a normalizar.
+
+    Returns:
+        str: Texto normalizado.
+    """
+    return re.sub(r'\s+', ' ', text).strip()
+
+def calculate_match_index(result, query):
+    query_terms = query.lower().split()
+    title = result.get("title", "").lower()
+    snippet = result.get("snippet", "").lower()
+    
+    title_matches = sum(1 for term in query_terms if term in title)
+    snippet_matches = sum(1 for term in query_terms if term in snippet)
+    
+    total_terms = len(query_terms)
+    return (0.6 * title_matches + 0.4 * snippet_matches) / total_terms if total_terms > 0 else 0
+
+def process_results_with_match_index(results, query):
+    if not results:
+        print("No se encontraron resultados para la consulta.")
+        return []
+    for result in results:
+        result["match_index"] = calculate_match_index(result, query)
+    return sorted(results, key=lambda x: x["match_index"], reverse=True)
+
+def search_text_in_social_sites(query, api_key, cx):
+    endpoint_url = "https://www.googleapis.com/customsearch/v1"
+    social_sites = [
+        "facebook.com", "instagram.com", "x.com", "linkedin.com",
+        "tiktok.com", "pinterest.com", "reddit.com", "youtube.com",
+        "snapchat.com", "tumblr.com", "flickr.com", "weibo.com",
+        "vk.com", "threads.net"
+    ]
+    site_filter = " OR ".join([f"site:{site}" for site in social_sites])
+    full_query = f'"{query}" ({site_filter})'
+    print(f"Consulta enviada a Google: {full_query}")
+
+    params = {"q": full_query, "key": api_key, "cx": cx}
+    response = requests.get(endpoint_url, params=params)
+    if response.status_code != 200:
+        raise Exception(f"Error en la API de búsqueda: {response.status_code} - {response.text}")
+    return response.json()
+
+def process_and_save_search_results(json_path, output_path, api_key, cx):
+    try:
+        with open(json_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            raw_query = data["clip"]["content"]["message"]
+            query = normalize_text(raw_query)  # Normalizar el texto
+
+        results = search_text_in_social_sites(query, api_key, cx)
+        results_with_index = process_results_with_match_index(results.get("items", []), query)
+
+        with open(output_path, 'w', encoding='utf-8') as file:
+            json.dump(results_with_index, file, ensure_ascii=False, indent=2)
+        print(f"Resultados guardados en: {output_path}")
+    except Exception as e:
+        print(f"Error durante el procesamiento: {e}")
+
+# Configuración
+json_path = "c_fb_1_norm.json"
+output_path = "social_search_results_exact.json"
+api_key = "AIzaSyDuiFvZAfbaODG7EdSGQy1gssyZZeuG7tI"
+cx = "05fe157e992fa438c"
+
+process_and_save_search_results(json_path, output_path, api_key, cx)

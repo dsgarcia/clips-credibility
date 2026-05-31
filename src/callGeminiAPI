@@ -1,0 +1,97 @@
+import json
+import google.generativeai as genai
+
+# Configurar la API Key
+genai.configure(api_key="AIzaSyDuiFvZAfbaODG7EdSGQy1gssyZZeuG7tI")
+
+# Leer el archivo JSON con codificación UTF-8
+def load_profile(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        print(f"Error: El archivo '{file_path}' no se encontró.")
+        exit(1)
+    except json.JSONDecodeError:
+        print(f"Error: El archivo '{file_path}' no contiene un JSON válido.")
+        exit(1)
+
+# Guardar el JSON actualizado con codificación UTF-8
+def save_profile(file_path, data):
+    try:
+        with open(file_path, 'w', encoding='utf-8') as file:
+            json.dump(data, file, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"Error al guardar el archivo JSON: {e}")
+        exit(1)
+
+# Extraer los atributos de la respuesta de Gemini con validación
+def extract_attributes(response_text):
+    try:
+        # Dividir la respuesta en líneas
+        lines = response_text.strip().split("\n")
+        
+        # Validar que hay al menos dos líneas y que siguen el formato esperado
+        if len(lines) < 2:
+            raise ValueError("La respuesta no contiene las líneas esperadas.")
+        
+        # Extraer y validar la profesión
+        profession_line = lines[0].strip()
+        if not profession_line.startswith("Profesion:"):
+            raise ValueError("La primera línea no sigue el formato 'Profesion:'.")
+        profession = profession_line.replace("Profesion:", "").strip()
+        
+        # Extraer y validar el índice de calidad
+        quality_line = lines[1].strip()
+        if not quality_line.startswith("profession_quality:"):
+            raise ValueError("La segunda línea no sigue el formato 'profession_quality:'.")
+        quality_str = quality_line.replace("profession_quality:", "").strip()
+        
+        # Convertir el índice de calidad a número
+        medical_index = int(quality_str)  # Cambiado a int si el rango es del 1 al 10
+        
+        return {"profession": profession, "medical_relevance_index": medical_index}
+    except (ValueError, IndexError) as ve:
+        print(f"Error al procesar la respuesta: {ve}")
+        return None
+
+# Cargar el perfil desde el archivo
+profile_path = "nc_fb_1.json"  # Ruta al archivo JSON
+profile = load_profile(profile_path)
+
+# Convertir el JSON a string
+profile_str = json.dumps(profile, ensure_ascii=False, indent=2)  # Conservar caracteres especiales
+
+# Prompt para el modelo
+prompt = (
+    f"Basado en el siguiente perfil, ¿cuál es la profesión asociada? "
+    f"La respuesta debe contener el nombre de la profesión en la primera línea, con el formato Profesion: "
+    f"y un índice que indique qué tan cercana está a una profesión médica, solo con un indicador del 1 al 10, en la segunda línea, con el formato profession_quality:\n\n"
+    f"Profile:\n{profile_str}"
+)
+
+# Usar el modelo para generar la respuesta
+try:
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    response = model.generate_content(prompt)
+except Exception as e:
+    print(f"Error al interactuar con el modelo: {e}")
+    exit(1)
+
+# Procesar la respuesta
+if response and response.text:
+    print("Response:")
+    print(response.text)
+    # Extraer atributos y agregar al JSON
+    extracted_attributes = extract_attributes(response.text)
+    if extracted_attributes:
+        profile.update(extracted_attributes)
+        # Guardar el JSON actualizado
+        save_profile(profile_path, profile)
+        print(f"El perfil actualizado se ha guardado en '{profile_path}'.")
+        print("Perfil actualizado:")
+        print(json.dumps(profile, ensure_ascii=False, indent=2))
+    else:
+        print("Error: No se pudieron extraer los atributos de la respuesta.")
+else:
+    print("Error: No se generó una respuesta válida.")

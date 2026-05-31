@@ -1,0 +1,59 @@
+from bs4 import BeautifulSoup
+import json
+
+def parse_facebook_information_tab(html_file, output_file):
+    """
+    Procesa un archivo HTML del tab 'Información' de un perfil de Facebook y guarda la información en formato JSON.
+    
+    :param html_file: Ruta del archivo HTML descargado del tab 'Información'.
+    :param output_file: Ruta del archivo donde se guardará la información en formato JSON.
+    """
+    try:
+        # Leer el contenido del archivo HTML
+        with open(html_file, "r", encoding="utf-8") as file:
+            html_content = file.read()
+
+        # Parsear el HTML
+        soup = BeautifulSoup(html_content, "html.parser")
+
+        # Extraer datos del tab "Información"
+        info_data = {}
+
+        # Sección: Detalles generales
+        general_info_section = soup.find("div", {"id": "general_information"})
+        if general_info_section:
+            general_info_items = general_info_section.find_all("li")
+            info_data["general_information"] = [item.text.strip() for item in general_info_items]
+
+        # Sección: Información de contacto
+        contact_info_section = soup.find("div", {"id": "contact_information"})
+        if contact_info_section:
+            contact_info_items = contact_info_section.find_all("li")
+            info_data["contact_information"] = [item.text.strip() for item in contact_info_items]
+
+        # Sección: Trabajo y estudios
+        work_education_section = soup.find("div", {"id": "work_and_education"})
+        if work_education_section:
+            work_education_items = work_education_section.find_all("li")
+            info_data["work_and_education"] = [item.text.strip() for item in work_education_items]
+
+        # Sección: Lugares vividos
+        places_section = soup.find("div", {"id": "places_lived"})
+        if places_section:
+            places_items = places_section.find_all("li")
+            info_data["places_lived"] = [item.text.strip() for item in places_items]
+
+        # Guardar los datos en un archivo JSON
+        with open(output_file, "w", encoding="utf-8") as file:
+            json.dump(info_data, file, indent=4, ensure_ascii=False)
+
+        print(f"Datos del tab 'Información' guardados exitosamente en {output_file}")
+
+    except Exception as e:
+        print(f"Error al procesar el archivo HTML: {e}")
+
+# Ejemplo de uso
+html_file = "facebook_information_tab.html"  # Ruta del archivo HTML del tab 'Información'
+output_file = "facebook_information.json"  # Archivo donde guardarás los datos extraídos
+
+parse_facebook_information_tab(html_file, output_file)

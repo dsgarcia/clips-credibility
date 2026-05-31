@@ -1,0 +1,88 @@
+import praw
+import json
+
+# Configura tu aplicación de Reddit
+reddit = praw.Reddit(
+    client_id="R4yWWSWOzaPZmI6teJ5-lQ",
+    client_secret="d5EANa0prEg4O-3xShXAt_bk-Ike2w",
+    user_agent="Descargar Reddit Post"
+)
+
+def extract_full_user_info(username):
+    """Extraer todos los campos posibles de un perfil de usuario."""
+    try:
+        user = reddit.redditor(username)
+        user_info = {
+            "username": user.name,
+            "id": user.id,
+            "karma_total": user.link_karma + user.comment_karma,
+            "link_karma": user.link_karma,
+            "comment_karma": user.comment_karma,
+            "created_utc": user.created_utc,
+            "is_gold": user.is_gold,
+            "is_mod": user.is_mod,
+            "has_verified_email": user.has_verified_email,
+            "subreddit": {
+                "description": user.subreddit.public_description if user.subreddit else None,
+                "display_name_prefixed": user.subreddit.display_name_prefixed if user.subreddit else None,
+                "subscribers": user.subreddit.subscribers if user.subreddit else None,
+                "banner_img": user.subreddit.banner_img if user.subreddit else None,
+                "icon_img": user.subreddit.icon_img if user.subreddit else None,
+                "over18": user.subreddit.over18 if user.subreddit else None,
+            } if hasattr(user, "subreddit") and user.subreddit else None
+        }
+        return user_info
+    except Exception as e:
+        print(f"Error al extraer información de {username}: {e}")
+        return None
+
+def download_reddit_post(url, output_file):
+    """Descargar un post y los comentarios, incluyendo información de los usuarios."""
+    try:
+        # Obtener el post usando el enlace
+        submission = reddit.submission(url=url)
+
+        # Procesar el contenido del post
+        post_data = {
+            "id": submission.id,
+            "title": submission.title,
+            "selftext": submission.selftext,
+            "author": str(submission.author),
+            "created_utc": submission.created_utc,
+            "url": submission.url,
+            "score": submission.score,
+            "num_comments": submission.num_comments,
+            "comments": []
+        }
+
+        # Descargar todos los comentarios
+        submission.comments.replace_more(limit=None)  # Expandir comentarios
+        for comment in submission.comments.list():
+            comment_data = {
+                "id": comment.id,
+                "author": str(comment.author),
+                "body": comment.body,
+                "score": comment.score,
+                "created_utc": comment.created_utc
+            }
+
+            # Extraer información del autor del comentario
+            if comment.author:
+                user_info = extract_full_user_info(comment.author.name)
+                if user_info:
+                    comment_data["user_info"] = user_info
+
+            post_data["comments"].append(comment_data)
+
+        # Guardar el post y sus comentarios en un archivo JSON
+        with open(output_file, "w", encoding="utf-8") as file:
+            json.dump(post_data, file, indent=4, ensure_ascii=False)
+        print(f"Post y comentarios guardados exitosamente en {output_file}")
+
+    except Exception as e:
+        print(f"Error al procesar el post: {e}")
+
+# Ejemplo de uso
+reddit_url = "https://www.reddit.com/r/Cholesterol/comments/1glubck/should_i_start_rosuvastatin_40mg_immediately_or/"
+output_file = "reddit_post_with_users.json"
+download_reddit_post(reddit_url, output_file)

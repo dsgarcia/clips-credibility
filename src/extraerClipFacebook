@@ -1,0 +1,67 @@
+import requests
+import json
+
+# Configuración
+ACCESS_TOKEN = "239610fd3c818f3d81348f02e2ad9016"  # Reemplaza con tu token de acceso
+GRAPH_API_URL = "https://graph.facebook.com/v19.0"  # Actualizado a la versión más reciente
+
+def download_facebook_post(post_url, output_file):
+    """
+    Descargar un post de Facebook en formato JSON.
+    
+    :param post_url: URL del post de Facebook
+    :param output_file: Archivo de salida en formato JSON
+    """
+    try:
+        # Extraer el ID del post desde la URL
+        post_id = extract_post_id(post_url)
+        
+        # Construir la URL para la API Graph
+        url = f"{GRAPH_API_URL}/{post_id}?fields=id,message,created_time,story,permalink_url,from{{name,id}},comments.summary(true),reactions.summary(true)&access_token={ACCESS_TOKEN}"
+        
+        # Hacer la solicitud a la API
+        response = requests.get(url)
+        
+        if response.status_code == 200:
+            post_data = response.json()
+            
+            # Guardar los datos en un archivo JSON
+            with open(output_file, "w", encoding="utf-8") as file:
+                json.dump(post_data, file, indent=4, ensure_ascii=False)
+            
+            print(f"Post guardado exitosamente en {output_file}")
+        else:
+            print(f"Error al descargar el post: {response.status_code} - {response.text}")
+    except Exception as e:
+        print(f"Error al procesar el post: {e}")
+
+def extract_post_id(post_url):
+    """
+    Extraer el ID del post desde una URL de Facebook.
+    
+    :param post_url: URL del post de Facebook
+    :return: ID del post
+    """
+    try:
+        # Facebook URLs típicas:
+        # - https://www.facebook.com/{page_name}/posts/{post_id}
+        # - https://www.facebook.com/{page_id}/videos/{video_id}
+        # - https://www.facebook.com/story.php?story_fbid={post_id}&id={page_id}
+        if "story_fbid=" in post_url:
+            # Caso de story.php
+            post_id = post_url.split("story_fbid=")[1].split("&")[0]
+        elif "/posts/" in post_url or "/videos/" in post_url:
+            # Caso de posts/videos
+            post_id = post_url.split("/")[-1]
+        else:
+            raise ValueError("No se pudo identificar el formato del ID del post.")
+        return post_id
+    except Exception as e:
+        print(f"Error al extraer el ID del post: {e}")
+        raise
+
+# Ejemplo de uso
+post_url = "https://www.facebook.com/{page_name}/posts/{post_id}"  # Reemplaza con la URL del post
+output_file = "facebook_post.json"
+
+download_facebook_post(post_url, output_file)

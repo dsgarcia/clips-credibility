@@ -1,0 +1,131 @@
+import requests
+import base64
+import json
+
+def search_similar_images_local(image_path):
+    """
+    Busca imágenes similares utilizando la API de Google Vision con una imagen local.
+
+    Args:
+        image_path (str): Ruta de la imagen local.
+
+    Returns:
+        dict: Resultados de la búsqueda de imágenes similares.
+    """
+    api_key = "AIzaSyDuiFvZAfbaODG7EdSGQy1gssyZZeuG7tI"  # API Key proporcionada
+    endpoint_url = f"https://vision.googleapis.com/v1/images:annotate?key={api_key}"
+
+    # Leer la imagen y codificarla en base64
+    with open(image_path, "rb") as image_file:
+        encoded_image = base64.b64encode(image_file.read()).decode("utf-8")
+
+    # Configurar la solicitud para Cloud Vision API
+    request_body = {
+        "requests": [
+            {
+                "image": {
+                    "content": encoded_image
+                },
+                "features": [
+                    {
+                        "type": "WEB_DETECTION",
+                        "maxResults": 10
+                    }
+                ]
+            }
+        ]
+    }
+
+    # Realizar la solicitud
+    response = requests.post(endpoint_url, json=request_body)
+    if response.status_code != 200:
+        raise Exception(f"Error en la API de Vision: {response.status_code} - {response.text}")
+    
+    return response.json()
+
+def resolve_entity_url(entity_id, api_key):
+    """
+    Resuelve el URL asociado a un entityId utilizando la API de Knowledge Graph.
+
+    Args:
+        entity_id (str): Identificador de la entidad (entityId).
+        api_key (str): Clave de API de Google Cloud.
+
+    Returns:
+        dict: URL y detalles asociados a la entidad.
+    """
+    kg_endpoint_url = f"https://kgsearch.googleapis.com/v1/entities:search"
+    params = {
+        "ids": entity_id,
+        "key": api_key,
+        "limit": 1,
+        "indent": True
+    }
+    response = requests.get(kg_endpoint_url, params=params)
+    if response.status_code != 200:
+        return {"entityId": entity_id, "error": response.text}
+    response_data = response.json()
+    if "itemListElement" in response_data and response_data["itemListElement"]:
+        entity_data = response_data["itemListElement"][0]["result"]
+        return {
+            "entityId": entity_id,
+            "name": entity_data.get("name"),
+            "url": entity_data.get("url"),
+            "description": entity_data.get("description")
+        }
+    return {"entityId": entity_id, "error": "No data found"}
+
+def resolve_web_entities(web_entities, api_key):
+    """
+    Resuelve URLs asociadas a una lista de webEntities.
+
+    Args:
+        web_entities (list): Lista de webEntities con entityId.
+        api_key (str): Clave de API de Google Cloud.
+
+    Returns:
+        list: Lista de webEntities con URLs resueltas.
+    """
+    resolved_entities = []
+    for entity in web_entities:
+        entity_id = entity.get("entityId")
+        if entity_id:
+            resolved_entity = resolve_entity_url(entity_id, api_key)
+            resolved_entity["score"] = entity.get("score", 0)
+            resolved_entities.append(resolved_entity)
+    return resolved_entities
+
+def process_and_save_results(image_path, output_path):
+    """
+    Procesa la búsqueda de imágenes similares y guarda los resultados con URLs resueltas en un archivo JSON.
+
+    Args:
+        image_path (str): Ruta de la imagen local.
+        output_path (str): Ruta del archivo donde guardar los resultados.
+    """
+    try:
+        # API Key
+        api_key = "AIzaSyDuiFvZAfbaODG7EdSGQy1gssyZZeuG7tI"
+
+        # Buscar imágenes similares
+        results = search_similar_images_local(image_path)
+
+        # Extraer webEntities
+        web_entities = results.get("responses", [{}])[0].get("webDetection", {}).get("webEntities", [])
+
+        # Resolver URLs de webEntities
+        resolved_web_entities = resolve_web_entities(web_entities, api_key)
+
+        # Guardar los resultados
+        results["resolvedWebEntities"] = resolved_web_entities
+        with open(output_path, 'w', encoding='utf-8') as file:
+            json.dump(results, file, ensure_ascii=False, indent=2)
+        print(f"Resultados guardados en: {output_path}")
+    except Exception as e:
+        print(f"Error durante el procesamiento: {e}")
+
+# Invocación de la función con la imagen y la ruta de salida
+image_path = "468995844_18041130632189622_3020461100389988739_n.jpg"
+output_path = "provenance_google_images.json"
+
+process_and_save_results(image_path, output_path)
