@@ -1,6 +1,7 @@
 import requests
 import json
 import re
+from config import require_env
 
 def normalize_text(text):
     """
@@ -70,7 +71,7 @@ def process_and_save_search_results(json_path, output_path, api_key, cx):
 # Configuración
 json_path = "c_fb_1_norm.json"
 output_path = "social_search_results_exact.json"
-api_key = "AIzaSyDuiFvZAfbaODG7EdSGQy1gssyZZeuG7tI"
-cx = "05fe157e992fa438c"
+api_key = require_env("GOOGLE_API_KEY")
+cx = require_env("GOOGLE_CSE_ID")
 
 process_and_save_search_results(json_path, output_path, api_key, cx)

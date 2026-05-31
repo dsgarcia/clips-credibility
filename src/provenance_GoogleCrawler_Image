@@ -1,6 +1,7 @@
 import requests
 import base64
 import json
+from config import require_env
 
 def search_similar_images_local(image_path):
     """
@@ -12,7 +13,7 @@ def search_similar_images_local(image_path):
     Returns:
         dict: Resultados de la búsqueda de imágenes similares.
     """
-    api_key = "AIzaSyDuiFvZAfbaODG7EdSGQy1gssyZZeuG7tI"  # API Key proporcionada
+    api_key = require_env("GOOGLE_API_KEY")
     endpoint_url = f"https://vision.googleapis.com/v1/images:annotate?key={api_key}"
 
     # Leer la imagen y codificarla en base64
@@ -104,8 +105,7 @@ def process_and_save_results(image_path, output_path):
         output_path (str): Ruta del archivo donde guardar los resultados.
     """
     try:
-        # API Key
-        api_key = "AIzaSyDuiFvZAfbaODG7EdSGQy1gssyZZeuG7tI"
+        api_key = require_env("GOOGLE_API_KEY")
 
         # Buscar imágenes similares
         results = search_similar_images_local(image_path)

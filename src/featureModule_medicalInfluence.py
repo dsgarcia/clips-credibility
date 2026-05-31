@@ -3,9 +3,10 @@ import google.generativeai as genai
 from datetime import datetime
 import time
 import os
+from config import require_env
 
 # Configurar la API Key
-genai.configure(api_key="AIzaSyDuiFvZAfbaODG7EdSGQy1gssyZZeuG7tI")
+genai.configure(api_key=require_env("GEMINI_API_KEY"))
 
 def load_profile(file_path):
     try:

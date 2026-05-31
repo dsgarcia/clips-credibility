@@ -157,7 +157,13 @@ Some scripts call external APIs:
 Before running the scripts, move credentials to environment variables or another
 secure configuration mechanism. Do not commit API keys or access tokens.
 
-Suggested environment variable names:
+Copy `.env.example` to `.env` for local development and load it in your shell, or
+export the variables manually:
+
+```bash
+cp .env.example .env
+set -a; source .env; set +a
+```
 
 ```bash
 export GEMINI_API_KEY="..."
@@ -165,11 +171,13 @@ export GOOGLE_API_KEY="..."
 export GOOGLE_CSE_ID="..."
 export REDDIT_CLIENT_ID="..."
 export REDDIT_CLIENT_SECRET="..."
+export REDDIT_USER_AGENT="clips-credibility/0.1"
 export X_BEARER_TOKEN="..."
 export FACEBOOK_ACCESS_TOKEN="..."
 ```
 
-The current scripts may need small edits to consume these variables.
+The current scripts read credentials from these environment variables through
+`src/config.py`.
 
 ## Example Usage
 
@@ -404,7 +412,13 @@ Algunos scripts llaman APIs externas:
 Antes de ejecutar los scripts, mover credenciales a variables de entorno u otro
 mecanismo seguro de configuración. No versionar API keys ni access tokens.
 
-Nombres sugeridos de variables:
+Copiar `.env.example` a `.env` para desarrollo local y cargarlo en la terminal, o
+exportar las variables manualmente:
+
+```bash
+cp .env.example .env
+set -a; source .env; set +a
+```
 
 ```bash
 export GEMINI_API_KEY="..."
@@ -412,12 +426,13 @@ export GOOGLE_API_KEY="..."
 export GOOGLE_CSE_ID="..."
 export REDDIT_CLIENT_ID="..."
 export REDDIT_CLIENT_SECRET="..."
+export REDDIT_USER_AGENT="clips-credibility/0.1"
 export X_BEARER_TOKEN="..."
 export FACEBOOK_ACCESS_TOKEN="..."
 ```
 
-Los scripts actuales pueden requerir ajustes menores para consumir estas
-variables.
+Los scripts actuales leen credenciales desde estas variables de entorno mediante
+`src/config.py`.
 
 ## Ejemplo De Uso
 

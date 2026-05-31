@@ -1,11 +1,12 @@
 import praw
 import json
+from config import optional_env, require_env
 
 # Configura tu aplicación de Reddit
 reddit = praw.Reddit(
-    client_id="R4yWWSWOzaPZmI6teJ5-lQ",
-    client_secret="d5EANa0prEg4O-3xShXAt_bk-Ike2w",
-    user_agent="Descargar Reddit Post"
+    client_id=require_env("REDDIT_CLIENT_ID"),
+    client_secret=require_env("REDDIT_CLIENT_SECRET"),
+    user_agent=optional_env("REDDIT_USER_AGENT", "clips-credibility/0.1")
 )
 
 def extract_full_user_info(username):

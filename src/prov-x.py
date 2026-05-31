@@ -1,7 +1,8 @@
 import tweepy
+from config import require_env
 
 # Set up the Bearer Token
-bearer_token = 'AAAAAAAAAAAAAAAAAAAAANC0wAAAAAAAMptkXVhkvjewub0V9b5ww%2FTLF18%3DQX0ko2Q7j2Vw6e3iZcKVtKj4EXV4wPTvaeS2xIVxcB4pE5CKhl'
+bearer_token = require_env("X_BEARER_TOKEN")
 
 # Initialize the client
 client = tweepy.Client(bearer_token=bearer_token)

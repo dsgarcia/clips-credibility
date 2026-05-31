@@ -3,9 +3,10 @@ import google.generativeai as genai
 from datetime import datetime
 import time
 import os
+from config import require_env
 
 # Configurar la API Key
-genai.configure(api_key="AIzaSyDuiFvZAfbaODG7EdSGQy1gssyZZeuG7tI")
+genai.configure(api_key=require_env("GEMINI_API_KEY"))
 
 # Leer el archivo JSON con codificación UTF-8
 def load_profile(file_path):
@@ -104,4 +105,3 @@ def process_feature(file_path):
                 save_profile(file_path, profile, module_name_education)
     except Exception as e:
         print(f"Error al procesar el feature: {e}")
-

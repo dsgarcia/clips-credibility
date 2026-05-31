@@ -1,8 +1,9 @@
 import requests
 import json
+from config import require_env
 
 # Configuración
-ACCESS_TOKEN = "239610fd3c818f3d81348f02e2ad9016"  # Reemplaza con tu token de acceso
+ACCESS_TOKEN = require_env("FACEBOOK_ACCESS_TOKEN")
 GRAPH_API_URL = "https://graph.facebook.com/v19.0"  # Actualizado a la versión más reciente
 
 def download_facebook_post(post_url, output_file):

@@ -1,8 +1,9 @@
 import requests
 import json
+from config import require_env
 
-# Configura tu Bearer Token aquí
-BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAANC0wAAAAAAATOF9fy%2BHXDd%2BLYmRTDcNHeqHYX0%3DZZPR0mM1qig4wWBSQ4i3hb0Z7j74YAOtb4yfMb0IxhKp98fmkG"
+# Configura tu Bearer Token mediante la variable de entorno X_BEARER_TOKEN.
+BEARER_TOKEN = require_env("X_BEARER_TOKEN")
 
 # Función para obtener un tweet por ID y guardarlo como JSON
 def get_tweet_and_save_as_json(tweet_id):
@@ -40,5 +41,4 @@ tweet_ids = [
 
 
 download_tweets(tweet_ids)
-
 
